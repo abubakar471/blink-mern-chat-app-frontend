@@ -51,7 +51,7 @@ const Chat = () => {
 
         if (state && state.token) {
             const connectToWebSocket = () => {
-                const ws = new WebSocket(`wss://${import.meta.env.VITE_BLINK_WEB_SOCKET}`, `${state.token}`);
+                const ws = new WebSocket(`ws://${import.meta.env.VITE_BLINK_WEB_SOCKET}`, `${state.token}`);
                 setWs(ws);
                 ws.addEventListener('message', handleMessage);
                 ws.addEventListener('error', () => {
