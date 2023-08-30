@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html{
+    overflow: hidden;
+} */
+
+html{
+    scroll-behavior: smooth;
+   
+}
+
+@media (max-width : "450px"){
+    .resp_div{
+        width: 100% !important;
+    }
+
+    .chat-list{
+        color : red !important;
+    }
+}
