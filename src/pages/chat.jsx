@@ -40,7 +40,7 @@ const Chat = () => {
     const [anchorEl, setAnchorEl] = useState(null);
 
     const handleMenu = (event) => {
-        setAnchorEl(event.currentTarget);
+        setAnchorEl(event.currentTarget)
     };
 
     const handleClose = () => {
