@@ -51,7 +51,7 @@ const Chat = () => {
 
         if (state && state.token) {
             const connectToWebSocket = () => {
-                const ws = new WebSocket(`wss://http://172.17.0.121:3000`, `${state.token}`);
+                const ws = new WebSocket(`wss://https://knowledgeable-endurable-aftermath.glitch.me`, `${state.token}`);
                 setWs(ws);
                 ws.addEventListener('message', handleMessage);
                 ws.addEventListener('error', () => {
