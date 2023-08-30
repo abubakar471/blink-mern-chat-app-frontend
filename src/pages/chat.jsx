@@ -51,7 +51,7 @@ const Chat = () => {
 
         if (state && state.token) {
             const connectToWebSocket = () => {
-                const ws = new WebSocket(`wss://http://knowledgeable-endurable-aftermath.glitch.me`, `${state.token}`);
+                const ws = new WebSocket(`ws://${import.meta.env.VITE_BLINK_WEB_SOCKET}`, `${state.token}`);
                 setWs(ws);
                 ws.addEventListener('message', handleMessage);
                 ws.addEventListener('error', () => {
@@ -94,7 +94,7 @@ const Chat = () => {
                     }
 
 
-
+                  
                     // console.log("messageData", messageData);
                     // if (messageData.sender === state.user._id) {
                     //     console.log('ghghghghghghg')
@@ -332,7 +332,7 @@ const Chat = () => {
                 <AuthNavbar />
 
                 <div className={
-                    `${open && 'w-[100%]'} 
+                `${open && 'w-[100%]'} 
                 mx-auto flex
                 h-[90vh] md:h-[90vh] lg:h-[90vh] 
                 justify-center`}>
