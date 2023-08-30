@@ -94,7 +94,7 @@ const Chat = () => {
                     }
 
 
-                    // console.log("chat now in websocket", selectedChat || chatNow)
+                  
                     // console.log("messageData", messageData);
                     // if (messageData.sender === state.user._id) {
                     //     console.log('ghghghghghghg')
