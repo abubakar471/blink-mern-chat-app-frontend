@@ -23,7 +23,7 @@ const Login = () => {
             });
 
             if (data) {
-                console.log(data);
+                console.log(data)
 
                 setState({
                     user: data.user,
