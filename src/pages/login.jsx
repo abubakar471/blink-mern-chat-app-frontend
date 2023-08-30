@@ -29,8 +29,11 @@ const Login = () => {
                     token: data.token
                 });
                 
-                window.localStorage.setItem("user", JSON.stringify(data));
-
+                // window.localStorage.setItem("user", JSON.stringify(data));
+                window.localStorage.setItem("user", JSON.stringify({
+                    user: data.user,
+                    token: data.token
+                }));
                 toast("Logged in successfully", {
                     icon: "✔"
                 });
