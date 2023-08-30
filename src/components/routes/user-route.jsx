@@ -15,8 +15,12 @@ const UserRoute = ({ children }) => {
 
     const getCurrentUser = async () => {
         try {
-            console.log('state',state);
-            const { data } = await axios.get('/user/currentUser');
+            const { data } = await axios.get('/user/currentUser', {
+                headers: {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Credentials": true,
+                },
+            });
             if (data.ok) {
                 setOk(true)
             } else {
