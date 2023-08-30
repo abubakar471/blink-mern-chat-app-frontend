@@ -20,6 +20,7 @@ import { ChatContext } from "../contexts/ChatContext";
 import ChatBox from "../components/chat-box";
 import ChatList from "../components/chat-list";
 import AuthNavbar from "../components/auth-navbar";
+import WebSocket from 'ws';
 
 const Chat = () => {
     const navigate = useNavigate();
@@ -40,7 +41,7 @@ const Chat = () => {
     const [anchorEl, setAnchorEl] = useState(null);
 
     const handleMenu = (event) => {
-        setAnchorEl(event.currentTarget)
+        setAnchorEl(event.currentTarget);
     };
 
     const handleClose = () => {
@@ -51,7 +52,7 @@ const Chat = () => {
 
         if (state && state.token) {
             const connectToWebSocket = () => {
-                const ws = new WebSocket(`wss://http://172.17.0.121:3000`, `${state.token}`);
+                const ws = new WebSocket(`wss://${import.meta.env.VITE_BLINK_WEB_SOCKET}`, `${state.token}`);
                 setWs(ws);
                 ws.addEventListener('message', handleMessage);
                 ws.addEventListener('error', () => {
