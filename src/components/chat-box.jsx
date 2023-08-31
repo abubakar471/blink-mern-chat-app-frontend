@@ -25,15 +25,15 @@ const ChatBox = ({ loading, setLoading,
             className="flex flex-col 
         md:w-2/3 lg:w-2/3 p-0 sm:w-[800px] 
         sm:mx-auto
-        w-[100%]
+        w-[100%] 
         ">
-            <div className="h-screen md:h-[900px] lg:h-[900px]
-             sm:w-full">
+            <div className="sm:w-full h-screen md:h-[900px] lg:h-[900px]      ">
                 {loading ? (
                     <div className="text-white h-[100%] flex items-center justify-center">
                         <Loader />
                     </div>
                 ) : <>
+
                     {!selectedChat && (
                         <>
                             {/* mobile view */}
@@ -62,7 +62,7 @@ const ChatBox = ({ loading, setLoading,
                     )}
 
                     {!!selectedChat && (
-                        <div className="relative h-[100%]">
+                        <div className="relative h-[90vh] md:h-[100%] lg:h-[100%]">
                             {/* topbar */}
                             <div
                                 className="fixed md:sticky lg:sticky border-b bg-black z-[999] p-2 text-white 
@@ -99,7 +99,7 @@ const ChatBox = ({ loading, setLoading,
 
                             {/* message list */}
                             <div
-                                className="overflow-auto mt-10 absolute top-12 right-0 left-0 bottom-2">
+                                className="overflow-auto mt-10 mb-10 absolute top-12 right-0 left-0 bottom-2">
                                 {messagesWithoutDupes.map((message) => (
                                     <div
                                         key={message._id}
@@ -222,8 +222,7 @@ const ChatBox = ({ loading, setLoading,
             </div>
 
             {!!selectedChat && (
-                <form onSubmit={sendMessage} className="sm:!fixed md:!static lg:!static sm:!bottom-0 
-                w-[100%] flex gap-2">
+                <form onSubmit={sendMessage} className="bg-red-500 sticky bottom-[3%] w-[100%] flex gap-2">
                     <input
                         className="bg-white border-2 border-violet-500
              p-2 outline-violet-500 flex-grow rounded-sm"

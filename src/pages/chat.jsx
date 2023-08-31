@@ -334,7 +334,7 @@ const Chat = () => {
                 <div className={
                 `${open && 'w-[100%]'} 
                 mx-auto flex
-                h-[90vh] md:h-[90vh] lg:h-[90vh] 
+                h-[100%] md:h-[90vh] lg:h-[90vh] 
                 justify-center`}>
                     <ChatList
                         onlinePeopleExclOurUser={onlinePeopleExclOurUser}
