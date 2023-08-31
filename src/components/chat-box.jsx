@@ -222,7 +222,7 @@ const ChatBox = ({ loading, setLoading,
             </div>
 
             {!!selectedChat && (
-                <form onSubmit={sendMessage} className="sticky top-[100vh] md:static lg:static w-[100%] flex gap-2">
+                <form onSubmit={sendMessage} className="sm:!fixed md:!static lg:!static sm:!top-[100vh]  w-[100%] flex gap-2">
                     <input
                         className="bg-white border-2 border-violet-500
              p-2 outline-violet-500 flex-grow rounded-sm"
