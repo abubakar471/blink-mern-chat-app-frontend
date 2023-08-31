@@ -1,12 +1,13 @@
 import axios from "axios";
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast"
 import Logo from "../components/logo";
+import { UserContext } from "../contexts/UserContext";
 
 const Register = () => {
     const navigate = useNavigate();
-    navigate
+    const {state, setState} = useContext(UserContext);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
