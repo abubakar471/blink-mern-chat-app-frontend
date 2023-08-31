@@ -6,7 +6,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 import Logo from "./logo";
 import axios from "axios";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../contexts/UserContext";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
@@ -25,9 +25,11 @@ const AuthNavbar = () => {
         setAnchorEl(null);
     };
 
+
+
     const logout = async () => {
         try {
-            setLoading(true)
+            setLoading(true);
             const { data } = await axios.post('/auth/logout');
             if (data.ok) {
                 console.log(data.ok);

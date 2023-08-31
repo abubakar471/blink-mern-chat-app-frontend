@@ -44,6 +44,11 @@ const Register = () => {
         }
     }
 
+    if (state && state.token) {
+        navigate("/chat");
+    }
+
+
     return (
         <div>
             <div className="h-[60vh] md:h-screen lg:h-screen flex flex-col justify-center items-center">
