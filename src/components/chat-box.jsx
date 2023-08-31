@@ -65,8 +65,8 @@ const ChatBox = ({ loading, setLoading,
                         <div className="relative h-[100%]">
                             {/* topbar */}
                             <div
-                                className="sticky border-b bg-black z-[999] p-2 text-white 
-                                text-md flex items-center gap-2"
+                                className="fixed md:sticky lg:sticky border-b bg-black z-[999] p-2 text-white 
+                                text-md flex items-center gap-2 w-[100%]"
                                 style={{
                                     background: "url(/assets/chat-topbar-bg-2.jpg) rgba(0,0,0,0.9)",
                                     backgroundSize: "cover",
@@ -76,7 +76,7 @@ const ChatBox = ({ loading, setLoading,
                                 }}
                             >
                                 {!!selectedChat && (loading ? <CircularProgress disableShrink size="1.5rem" color="secondary" /> : (
-                                    <>
+                                    <div className="flex items-center gap-2">
                                         <IconButton onClick={() => {
                                             setSelectedChat(null)
                                         }}>
@@ -93,7 +93,7 @@ const ChatBox = ({ loading, setLoading,
                                             online={Object.keys(onlinePeopleExclOurUser).find(oId => oId === selectedChat)}
                                         />
                                         <span>{selectedUser?.username}</span>
-                                    </>
+                                    </div>
                                 ))}
                             </div>
 
@@ -222,7 +222,7 @@ const ChatBox = ({ loading, setLoading,
             </div>
 
             {!!selectedChat && (
-                <form onSubmit={sendMessage} className="flex gap-2">
+                <form onSubmit={sendMessage} className="fixed md:static lg:static bottom-12 w-[100%] flex gap-2">
                     <input
                         className="bg-white border-2 border-violet-500
              p-2 outline-violet-500 flex-grow rounded-sm"
