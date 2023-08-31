@@ -20,7 +20,6 @@ import { ChatContext } from "../contexts/ChatContext";
 import ChatBox from "../components/chat-box";
 import ChatList from "../components/chat-list";
 import AuthNavbar from "../components/auth-navbar";
-import WebSocket from 'ws';
 
 const Chat = () => {
     const navigate = useNavigate();
