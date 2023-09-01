@@ -65,7 +65,7 @@ const ChatBox = ({ loading, setLoading,
                         <div className="relative h-[100%] md:h-[100%] lg:h-[100%] mb-2">
                             {/* topbar */}
                             <div
-                                className="!fixed !top-0 md:sticky lg:sticky border-b bg-black z-[999] p-2 text-white 
+                                className="!fixed md:sticky lg:sticky sm:!top-0 border-b bg-black z-[999] p-2 text-white 
                                 text-md flex items-center gap-2 w-[100%]"
                                 style={{
                                     background: "url(/assets/chat-topbar-bg-2.jpg) rgba(0,0,0,0.9)",
@@ -99,7 +99,7 @@ const ChatBox = ({ loading, setLoading,
 
                             {/* message list */}
                             <div
-                                className="min-h-[auto] h-[80%] overflow-auto mt-10  absolute top-12 right-0 left-0 bottom-2">
+                                className="h-[80%] overflow-auto mt-10  absolute top-12 right-0 left-0 bottom-2">
                                 {messagesWithoutDupes.map((message) => (
                                     <div
                                         key={message._id}
@@ -224,7 +224,7 @@ const ChatBox = ({ loading, setLoading,
             </div>
 
             {!!selectedChat && (
-                <div className="!fixed !bottom-0 md:static lg:static w-[100%]">
+                <div className={`fixed sm:bottom-0 md:static lg:static w-[100%]`}>
                     <form onSubmit={sendMessage} className="w-[100%] flex gap-2">
                         <input
                             className="bg-white border-2 border-violet-500
