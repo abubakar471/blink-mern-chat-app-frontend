@@ -222,7 +222,7 @@ const ChatBox = ({ loading, setLoading,
             </div>
 
             {!!selectedChat && (
-                <div className="sm:!fixed md:!static lg:!static !bottom-0  md:!bottom-[0%] lg:!bottom-[0%]">
+                <div className="!fixed md:!static lg:!static !bottom-0  md:!bottom-[0%] lg:!bottom-[0%]">
                     <form onSubmit={sendMessage} className="w-[100%] flex gap-2">
                     <input
                         className="bg-white border-2 border-violet-500
