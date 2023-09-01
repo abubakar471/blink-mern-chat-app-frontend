@@ -63,7 +63,7 @@ const ChatBox = ({ loading, setLoading,
 
                     {!!selectedChat && (
                         <div className="relative h-[100%]">
-                            {/* topbar */}
+                            {/* topbar*/}
                             <div
                                 className="fixed md:sticky lg:sticky border-b bg-black z-[999] p-2 text-white 
                                 text-md flex items-center gap-2 w-[100%]"
