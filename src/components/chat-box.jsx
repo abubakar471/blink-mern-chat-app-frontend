@@ -99,7 +99,7 @@ const ChatBox = ({ loading, setLoading,
 
                             {/* message list */}
                             <div
-                                className="h-[80vh] md:h-[80%] lg:h-[80%] my-auto overflow-auto mt-10 absolute top-12 right-0 left-0 bottom-2">
+                                className="h-[80vh] md:h-[80%] lg:h-[80%] my-auto overflow-auto absolute top-12 right-0 left-0 bottom-2">
                                 {messagesWithoutDupes.map((message) => (
                                     <div
                                         key={message._id}
@@ -214,7 +214,7 @@ const ChatBox = ({ loading, setLoading,
                                     </div>
                                 ))}
 
-                                <div className="!mb-8 md:!mb-0 lg:!mb-0" ref={divUnderMessagesRef}></div>
+                                <div ref={divUnderMessagesRef}></div>
                             </div>
 
 
