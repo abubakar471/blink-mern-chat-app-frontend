@@ -27,8 +27,7 @@ const ChatBox = ({ loading, setLoading,
         sm:mx-auto
         w-[100%]
         ">
-            <div className="h-screen md:h-[900px] lg:h-[900px]
-             sm:w-full">
+            <div className="h-screen relative bottom-2 md:h-[900px] lg:h-[900px] sm:w-full">
                 {loading ? (
                     <div className="text-white h-[100%] flex items-center justify-center">
                         <Loader />
