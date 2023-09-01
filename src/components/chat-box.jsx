@@ -214,7 +214,7 @@ const ChatBox = ({ loading, setLoading,
                                     </div>
                                 ))}
 
-                                <div ref={divUnderMessagesRef}></div>
+                                <div className="!mb-8 md:!mb-0 lg:!mb-0" ref={divUnderMessagesRef}></div>
                             </div>
 
 
