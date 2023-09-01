@@ -99,7 +99,7 @@ const ChatBox = ({ loading, setLoading,
 
                             {/* message list */}
                             <div
-                                className="h-[80%] overflow-auto mt-10  absolute top-12 right-0 left-0 bottom-2">
+                                className="h-[700px] overflow-auto mt-10  absolute top-12 right-0 left-0 bottom-2">
                                 {messagesWithoutDupes.map((message) => (
                                     <div
                                         key={message._id}
