@@ -53,7 +53,7 @@ const AuthNavbar = () => {
     }
     return (
         <nav className="flex 
-        items-center justify-between text-purple-500 z-[999] fixed md:!static lg:!static w-[100%] top-0 left-0 relative"
+        items-center justify-between text-purple-500 z-[999] !fixed !top-0 md:!static lg:!static w-[100%] left-0 relative"
             style={{
                 background: "url(/assets/chat-topbar-bg.jpg) rgba(0,0,0,0.9)",
                 backgroundSize: "cover",
