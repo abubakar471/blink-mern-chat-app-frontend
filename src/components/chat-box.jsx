@@ -65,7 +65,7 @@ const ChatBox = ({ loading, setLoading,
                         <div className="relative h-[100%]">
                             {/* topbar*/}
                             <div
-                                className="fixed md:sticky lg:sticky border-b bg-black z-[999] p-2 text-white 
+                                className="fixed top-0 md:sticky lg:sticky border-b bg-black z-[999] p-2 text-white 
                                 text-md flex items-center gap-2 w-[100%]"
                                 style={{
                                     background: "url(/assets/chat-topbar-bg-2.jpg) rgba(0,0,0,0.9)",
