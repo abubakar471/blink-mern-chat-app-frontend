@@ -64,7 +64,7 @@ const ChatBox = ({ loading, setLoading,
                         <div className="relative h-[100%]">
                             {/* topbar*/}
                             <div
-                                className=" border-b bg-black z-[999] 
+                                className="fixed top-12 border-b bg-black z-[999] 
                                 p-2 text-white text-md flex items-center gap-2 w-[100%]"
                                 style={{
                                     background: "url(/assets/chat-topbar-bg-2.jpg) rgba(0,0,0,0.9)",
@@ -98,7 +98,7 @@ const ChatBox = ({ loading, setLoading,
 
                             {/* message list */}
                             <div
-                                className="overflow-y-auto mt-10 absolute top-12 right-0 left-0 800px:bottom-4 bottom-6 md:bottom-2 lg:bottom-2 xl:bottom-0">
+                                className="overflow-y-auto mt-10 absolute top-12 md:top-16 right-0 left-0 800px:bottom-4 bottom-6 sm:bottom-0 md:bottom-2 lg:bottom-2 xl:bottom-0">
                                 {messagesWithoutDupes.map((message) => (
                                     <div
                                         key={message._id}
